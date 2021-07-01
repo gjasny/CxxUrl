@@ -47,3 +47,5 @@ target_link_libraries(fuzz PRIVATE -fsanitize=fuzzer)
 #target_link_libraries(fuzz PRIVATE -fsanitize=address)
 
 add_executable(crash crash.cpp ${SOURCES})
+target_compile_options(crash PRIVATE -fsanitize=address)
+target_link_libraries(crash PRIVATE -fsanitize=address)
