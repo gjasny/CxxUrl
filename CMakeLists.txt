@@ -39,8 +39,6 @@ add_library(CxxUrl SHARED ${SOURCES})
 set_target_properties(CxxUrl PROPERTIES SOVERSION 1)
 set_target_properties(CxxUrl PROPERTIES PUBLIC_HEADER url.hpp)
 
-add_executable(unit main.cpp ${SOURCES})
-
 add_executable(fuzz fuzz.cpp ${SOURCES})
 target_compile_options(fuzz PRIVATE -fsanitize=fuzzer)
 target_link_libraries(fuzz PRIVATE -fsanitize=fuzzer)

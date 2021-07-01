@@ -350,16 +350,6 @@ void test_all_valid() {
     test_valid(str,"http://bavaria.com:12",str,"http://bavaria.com:12",0);
     test_valid(str,"http://1.2.3.4:12",str,"http://1.2.3.4:12",4);
     test_valid(str,"http://[1:2:3:4:5:6:7:8]:0",str,"http://[1:2:3:4:5:6:7:8]:0",6);
-
-    // RFC 5952 conformance
-    test_valid(str,"http://[0001:0002:0003:0004:0005:0006:0007:0008]",str,"http://[1:2:3:4:5:6:7:8]",6);
-    test_valid(str,"http://[2001:db8:0:0:0:0:2:1]",str,"http://[2001:db8::2:1]",6);
-    test_valid(str,"http://[2001:db8::0:1]",str,"http://[2001:db8::1]",6);
-    test_valid(str,"http://[2001:db8::1:1:1:1:1]",str,"http://[2001:db8:0:1:1:1:1:1]",6);
-    test_valid(str,"http://[2001:db8:0:0:1:0:0:1]",str,"http://[2001:db8::1:0:0:1]",6);
-    test_valid(str,"http://[2001:db8::0:1]",str,"http://[2001:db8::1]",6);
-    test_valid(str,"http://[A:B:C:D:E:F::]",str,"http://[a:b:c:d:e:f::]",6);
-    test_valid(str,"http://[0:0:0:0:0:ffff:192.0.2.1]",str,"http://[::ffff:192.0.2.1]",6);
 }
 
 
