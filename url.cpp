@@ -276,7 +276,7 @@ std::string normalize_IPv6(const char *s, const char *e) {
     size_t i=0;
     while (p!=e) {
         if (*p++==':') {
-            if (i >= token_size) {
+            if (i+1 >= token_size) {
                 throw Url::parse_error("IPv6 ["+std::string(s,e-s)+"] is invalid");
             }
             tokens[i++]=b;
