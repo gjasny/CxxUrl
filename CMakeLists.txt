@@ -43,5 +43,5 @@ add_executable(fuzz fuzz.cpp ${SOURCES})
 target_compile_options(fuzz PRIVATE -march=native -fsanitize=fuzzer)
 target_link_libraries(fuzz PRIVATE -march=native -fsanitize=fuzzer)
 
-#target_compile_options(fuzz PRIVATE -fsanitize=address)
-#target_link_libraries(fuzz PRIVATE -fsanitize=address)
+target_compile_options(fuzz PRIVATE -fsanitize=address)
+target_link_libraries(fuzz PRIVATE -fsanitize=address)
